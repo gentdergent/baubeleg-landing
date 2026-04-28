@@ -15,7 +15,6 @@ import {
   Shield,
   MapPin,
   Scale,
-  Lightbulb,
 } from "lucide-react";
 import { FadeInUp, StaggerContainer, StaggerItem, ScaleIn, HoverLift } from "@/components/marketing/motion-wrapper";
 import { IPhoneMockup } from "@/components/ui/iphone-mockup";
@@ -73,13 +72,6 @@ const STEPS = [
     description:
       "PDF automatisch generiert, per E-Mail an den GU — Nachweis gesichert, Anspruch gesichert.",
   },
-];
-
-const PLANS = [
-  { name: "Solo", label: "Solo", price: "15", gf: 1, ma: 0, highlight: false },
-  { name: "S", label: "Starter", price: "40", gf: 1, ma: 5, highlight: false },
-  { name: "M", label: "Standard", price: "60", gf: 1, ma: 10, highlight: true },
-  { name: "L", label: "Professional", price: "80", gf: 1, ma: 20, highlight: false },
 ];
 
 const TRADES = [
@@ -174,7 +166,7 @@ export default function LandingPage() {
                 </h1>
                 <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-200 [text-shadow:0_1px_8px_rgba(0,0,0,0.5)] lg:mx-0 mx-auto">
                   BauBeleg dokumentiert Nachträge, Behinderungen und Stundenlohn in
-                  unter einer Minute — direkt auf der Baustelle. VOB/B-konform. Per Sprache
+                  unter einer Minute — direkt auf der Baustelle. Entwickelt für VOB/B-Prozesse. Per Sprache
                   oder Tippen.
                 </p>
                 <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row lg:justify-start sm:justify-center">
@@ -247,7 +239,7 @@ export default function LandingPage() {
           <div className="hidden h-4 w-px bg-slate-200 sm:block" aria-hidden="true" />
           <div className="flex items-center gap-2">
             <Scale className="h-4 w-4 text-slate-400" aria-hidden="true" />
-            <span className="text-sm text-slate-600">VOB/B-konform</span>
+            <span className="text-sm text-slate-600">Für VOB/B-Prozesse</span>
           </div>
         </div>
       </section>
@@ -327,7 +319,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-orange-500" aria-hidden="true" />
                   <span className="rounded-full bg-orange-100 px-2 py-0.5 text-xs font-semibold text-orange-700">
-                    Kein Wettbewerber hat das
+                    Einzigartig in dieser App
                   </span>
                 </div>
                 <h3 className="mt-3 text-lg font-bold text-slate-900">
@@ -352,7 +344,7 @@ export default function LandingPage() {
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   Mitarbeiter, Stunden, Material erfassen. Bauleiter unterschreibt
-                  digital. Rechtssicher abgerechnet.
+                  digital. Sauber abgerechnet, dokumentiert nach branchenüblichen Anforderungen.
                 </p>
               </div>
             </FadeInUp>
@@ -475,116 +467,6 @@ export default function LandingPage() {
               Foto &rarr; Sprache &rarr; PDF &rarr; Gesendet
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* ── Pricing ─────────────────────────────────────────────────────── */}
-      <section className="bg-slate-50 px-4 py-16 sm:px-6 sm:py-24">
-        <div className="mx-auto max-w-5xl">
-          <FadeInUp>
-            <div className="text-center">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
-                Einfache Preise, keine Überraschungen
-              </h2>
-              <p className="mt-3 text-slate-500">
-                Alle Pakete enthalten alle Funktionen. Kein Verstecken.
-              </p>
-            </div>
-          </FadeInUp>
-          <div className="mt-6 rounded-xl border border-orange-200 bg-orange-50 px-4 py-3 text-center">
-            <div className="flex items-center justify-center gap-2">
-              <Lightbulb className="h-4 w-4 flex-shrink-0 text-orange-600" aria-hidden="true" />
-              <p className="text-sm font-semibold text-orange-800">
-                Ein geretteter Nachtrag (&euro;3.000&ndash;10.000) zahlt die App für 5+ Jahre.
-              </p>
-            </div>
-          </div>
-          <div className="mt-8 grid gap-6 overflow-visible pt-2 sm:grid-cols-2 lg:grid-cols-4">
-            {PLANS.map((plan) => (
-              <HoverLift key={plan.name} className="h-full">
-                <div
-                  className={`relative h-full rounded-2xl border p-7 ${
-                    plan.highlight
-                      ? "border-blue-600 bg-blue-600 shadow-xl shadow-blue-600/20"
-                      : "border-slate-200 bg-white shadow-sm"
-                  }`}
-                >
-                  {plan.highlight && (
-                    <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                      <span className="whitespace-nowrap rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold text-white">
-                        Beliebteste Wahl
-                      </span>
-                    </div>
-                  )}
-                  <div className={plan.highlight ? "pt-2" : ""}>
-                    <p
-                      className={`text-xs font-semibold uppercase tracking-widest ${
-                        plan.highlight ? "text-blue-200" : "text-blue-600"
-                      }`}
-                    >
-                      {plan.label}
-                    </p>
-                    <div className="mt-2 flex items-end gap-1">
-                      <span
-                        className={`text-4xl font-extrabold ${
-                          plan.highlight ? "text-white" : "text-slate-900"
-                        }`}
-                      >
-                        {plan.price} &euro;
-                      </span>
-                      <span
-                        className={`mb-1 text-sm ${
-                          plan.highlight ? "text-blue-200" : "text-slate-400"
-                        }`}
-                      >
-                        / Monat
-                      </span>
-                    </div>
-                  </div>
-                  <ul className="mt-6 space-y-3">
-                    {[
-                      `${plan.gf} Geschäftsführer`,
-                      plan.ma === 0
-                        ? "Nur für dich — keine Mitarbeiter"
-                        : `Bis zu ${plan.ma} Mitarbeiter`,
-                      "Alle Funktionen enthalten",
-                      "Kein App Store nötig",
-                      "PDF-Export inklusive",
-                    ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5">
-                        <CheckCircle2
-                          className={`mt-0.5 h-4 w-4 flex-shrink-0 ${
-                            plan.highlight ? "text-blue-200" : "text-blue-600"
-                          }`}
-                          aria-hidden="true"
-                        />
-                        <span
-                          className={`text-sm ${
-                            plan.highlight ? "text-blue-100" : "text-slate-600"
-                          }`}
-                        >
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={`${APP_URL}/auth/register`}
-                    className={`mt-8 flex w-full items-center justify-center rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
-                      plan.highlight
-                        ? "bg-white text-blue-600 hover:bg-blue-50"
-                        : "bg-blue-600 text-white hover:bg-blue-500"
-                    }`}
-                  >
-                    Kostenlos testen
-                  </a>
-                </div>
-              </HoverLift>
-            ))}
-          </div>
-          <p className="mt-6 text-center text-sm text-slate-400">
-            Alle Preise zzgl. gesetzlicher MwSt. Monatlich kündbar.
-          </p>
         </div>
       </section>
 

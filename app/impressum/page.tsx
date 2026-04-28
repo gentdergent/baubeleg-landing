@@ -17,16 +17,20 @@ export default function ImpressumPage() {
 
       <div className="space-y-4 text-base text-gray-700">
         <div>
+          <p className="font-semibold">Angaben gemäß §5 TMG:</p>
           <p className="font-semibold">
-            Tigon Automation Muratovic & Cungu GbR
+            Tigon Automation Muratovic &amp; Cungu GbR
           </p>
+          <p>Rechtsform: Gesellschaft bürgerlichen Rechts (GbR)</p>
           <p>Gartenstraße 50</p>
           <p>70563 Stuttgart</p>
+          <p>Deutschland</p>
         </div>
 
         <div>
-          <p className="font-semibold">Vertreten durch:</p>
-          <p>Edon Muratovic & Gent Cungu</p>
+          <p className="font-semibold">Vertretungsberechtigte Gesellschafter:</p>
+          <p>Edon Muratovic (einzelvertretungsberechtigt)</p>
+          <p>Gent Cungu (einzelvertretungsberechtigt)</p>
         </div>
 
         <div>
@@ -49,6 +53,33 @@ export default function ImpressumPage() {
           <p>Edon Muratovic</p>
           <p>Gartenstraße 50, 70563 Stuttgart</p>
         </div>
+
+        <div>
+          <p className="font-semibold">
+            Online-Streitbeilegung / Verbraucherschlichtung:
+          </p>
+          <p>
+            Die EU-Kommission stellt unter{" "}
+            <a
+              href="https://ec.europa.eu/consumers/odr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              https://ec.europa.eu/consumers/odr/
+            </a>{" "}
+            eine Plattform zur Online-Streitbeilegung bereit. Wir sind nicht
+            bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor
+            einer Verbraucherschlichtungsstelle teilzunehmen (§36 VSBG).
+          </p>
+          <p className="mt-2">
+            Hinweis: BauBeleg richtet sich ausschließlich an Unternehmer im
+            Sinne von §14 BGB (B2B). Ein Widerrufsrecht nach §§312 ff. BGB
+            besteht für Unternehmer nicht.
+          </p>
+        </div>
+
+        <div className="pt-2 text-xs text-gray-400">Stand: 2026-04-28</div>
       </div>
 
       <Footer />
