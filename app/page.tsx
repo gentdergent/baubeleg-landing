@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import {
   FileText,
@@ -18,13 +17,14 @@ import {
 } from "lucide-react";
 import { FadeInUp, StaggerContainer, StaggerItem, ScaleIn, HoverLift } from "@/components/marketing/motion-wrapper";
 import { IPhoneMockup } from "@/components/ui/iphone-mockup";
+import { Footer } from "@/components/layout/footer";
 
 const APP_URL = "https://app.baubeleg.de";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
 const PROBLEMS = [
-  "Nachträge gehen in WhatsApp-Chats unter — und damit €3.000–10.000 pro Auftrag verloren",
+  "Nachträge gehen in WhatsApp-Chats unter — und damit potenziell mehrere Tausend Euro pro Auftrag verloren",
   "Excel-Tabellen auf dem Büro-PC — auf der Baustelle hast du nichts",
   "Handschriftliche Rapporte werden unleserlich oder gehen verloren",
   "Behinderungen werden zu spät gemeldet — Anspruch verfallen, Geld weg",
@@ -172,14 +172,14 @@ export default function LandingPage() {
                 <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row lg:justify-start sm:justify-center">
                   <a
                     href={`${APP_URL}/auth/register`}
-                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-colors sm:w-auto"
+                    className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-colors focus:outline-2 focus:outline-blue-300 focus:outline-offset-2 sm:w-auto"
                   >
                     Jetzt kostenlos testen
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </a>
                   <a
                     href={`${APP_URL}/auth/login`}
-                    className="flex w-full items-center justify-center rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm px-8 py-4 text-base font-semibold text-slate-100 hover:border-white/40 hover:bg-white/10 hover:text-white transition-colors sm:w-auto"
+                    className="flex w-full items-center justify-center rounded-xl border border-white/20 bg-white/5 backdrop-blur-sm px-8 py-4 text-base font-semibold text-slate-100 hover:border-white/40 hover:bg-white/10 hover:text-white transition-colors focus:outline-2 focus:outline-blue-300 focus:outline-offset-2 sm:w-auto"
                   >
                     Login
                   </a>
@@ -189,7 +189,7 @@ export default function LandingPage() {
                 </p>
                 <div className="mt-8 max-w-xl rounded-2xl border border-orange-500/30 bg-orange-500/10 backdrop-blur-sm px-6 py-4 lg:mx-0 mx-auto">
                   <p className="text-sm font-semibold text-orange-300">
-                    Branchenexperten schätzen: Bis zu 40 % aller Nachtragsansprüche kleiner Betriebe werden nie geltend gemacht — mangels Dokumentation.
+                    Erfahrungsberichte aus der Praxis zeigen: Viele Nachtragsansprüche kleiner Betriebe werden mangels Dokumentation nicht geltend gemacht.
                   </p>
                 </div>
               </div>
@@ -228,17 +228,17 @@ export default function LandingPage() {
       <section className="border-y border-slate-200 bg-white px-4 py-4">
         <div className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-8 gap-y-3">
           <div className="flex items-center gap-2">
-            <Shield className="h-4 w-4 text-slate-400" aria-hidden="true" />
+            <Shield className="h-4 w-4 text-slate-500" aria-hidden="true" />
             <span className="text-sm text-slate-600">DSGVO-konform</span>
           </div>
           <div className="hidden h-4 w-px bg-slate-200 sm:block" aria-hidden="true" />
           <div className="flex items-center gap-2">
-            <MapPin className="h-4 w-4 text-slate-400" aria-hidden="true" />
+            <MapPin className="h-4 w-4 text-slate-500" aria-hidden="true" />
             <span className="text-sm text-slate-600">Serverstandort Deutschland</span>
           </div>
           <div className="hidden h-4 w-px bg-slate-200 sm:block" aria-hidden="true" />
           <div className="flex items-center gap-2">
-            <Scale className="h-4 w-4 text-slate-400" aria-hidden="true" />
+            <Scale className="h-4 w-4 text-slate-500" aria-hidden="true" />
             <span className="text-sm text-slate-600">Für VOB/B-Prozesse</span>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function LandingPage() {
         <div className="mx-auto max-w-4xl">
           <FadeInUp>
             <div className="text-center">
-              <p className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+              <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 Kennst du das?
               </p>
               <h2 className="mt-3 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
@@ -402,7 +402,7 @@ export default function LandingPage() {
       {/* ── Social Proof ────────────────────────────────────────────────── */}
       <section className="bg-slate-50 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wider text-slate-400">
+          <p className="text-sm font-semibold uppercase tracking-wider text-slate-500">
             Gebaut für
           </p>
           <div className="mt-4 flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1.5">
@@ -495,14 +495,14 @@ export default function LandingPage() {
             <div className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <a
                 href={`${APP_URL}/auth/register`}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors sm:w-auto"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors focus:outline-2 focus:outline-blue-300 focus:outline-offset-2 sm:w-auto"
               >
                 Jetzt kostenlos testen
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href={`${APP_URL}/auth/login`}
-                className="flex w-full items-center justify-center rounded-xl border border-slate-600 px-8 py-4 text-base font-semibold text-slate-200 hover:border-slate-400 hover:text-white transition-colors sm:w-auto"
+                className="flex w-full items-center justify-center rounded-xl border border-slate-600 px-8 py-4 text-base font-semibold text-slate-200 hover:border-slate-400 hover:text-white transition-colors focus:outline-2 focus:outline-blue-300 focus:outline-offset-2 sm:w-auto"
               >
                 Login
               </a>
@@ -511,44 +511,7 @@ export default function LandingPage() {
         </FadeInUp>
       </section>
 
-      {/* ── Footer ──────────────────────────────────────────────────────── */}
-      <footer className="border-t border-slate-800 bg-slate-900 px-4 py-8 sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <Image
-              src="/logo-badge-white.png"
-              alt="BauBeleg"
-              width={28}
-              height={28}
-              className="h-7 w-7"
-            />
-            <span className="text-sm font-semibold text-white">BauBeleg</span>
-          </div>
-          <p className="text-xs text-slate-500">
-            &copy; {new Date().getFullYear()} BauBeleg. Alle Rechte vorbehalten.
-          </p>
-          <nav className="flex gap-5">
-            <Link
-              href="/impressum"
-              className="text-xs text-slate-400 hover:text-white transition-colors"
-            >
-              Impressum
-            </Link>
-            <Link
-              href="/datenschutz"
-              className="text-xs text-slate-400 hover:text-white transition-colors"
-            >
-              Datenschutz
-            </Link>
-            <Link
-              href="/nutzungsbedingungen"
-              className="text-xs text-slate-400 hover:text-white transition-colors"
-            >
-              Nutzungsbedingungen
-            </Link>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
